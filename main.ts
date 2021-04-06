@@ -2,11 +2,11 @@ enum RadioMessage {
     message1 = 49434,
     Doorbellreceiver = 60681,
     Yes = 16427,
-    No = 48082
+    No = 48082,
+    door = 7315
 }
-radio.onReceivedMessage(RadioMessage.Doorbellreceiver, function () {
+radio.onReceivedMessage(RadioMessage.door, function () {
     music.startMelody(music.builtInMelody(Melodies.Ringtone), MelodyOptions.Once)
-    basic.showString("Someone is at the door")
 })
 let Yes = 0
 radio.setGroup(1)
